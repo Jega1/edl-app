@@ -1,5 +1,5 @@
-import 'package:edl/screens/piece/piece_screen.dart';
-import 'package:edl/screens/piece/pieces_list.dart';
+
+import 'package:edl/screens/piece/pieces_list_screen.dart';
 
 import 'package:edl/screens/tab_bien/compteur/compteur_list.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
         '/tabs-bien-screen': (ctx) => TabsBienScreen(),
            '/note-screen': (ctx) => CompteurList(),
 
-       '/pieces-list': (ctx) => PieceList(),
+       '/pieces-list': (ctx) => PieceListScreen(),
        // '/pieces-screen': (ctx) => PieceScreen(),
 
       },

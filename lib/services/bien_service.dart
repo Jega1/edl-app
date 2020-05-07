@@ -9,7 +9,7 @@ class ApiService {
 
   Future<List<Bien>> getBiens() async {
     final response =
-    await client.get("$baseUrl");
+    await client.get("$baseUrl/");
     if (response.statusCode == 200) {
       return bienFromJson(response.body);
     } else {

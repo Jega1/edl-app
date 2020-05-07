@@ -30,10 +30,11 @@ class TabsBienScreenState extends State<TabsBienScreen> {
 
              tabs: <Widget>[
                 Tab(
-                  icon: Icon(Icons.category),
+                  //icon: Icon(Icons.category),
                   text: 'Compteur',
                 ),
-                Tab(icon: Icon(Icons.star),
+                Tab(
+                    //icon: Icon(Icons.star),
                     text: 'Général'),
               ],
             ),

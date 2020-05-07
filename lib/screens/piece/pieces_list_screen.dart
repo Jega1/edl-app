@@ -1,16 +1,17 @@
 import 'dart:core';
+import 'package:edl/customs_alertbox/piece_alertbox.dart';
 import 'package:flutter/material.dart';
-import '../../importantLink.dart';
+
 import 'add_piece_screen.dart';
 
 
-class PieceList extends StatefulWidget {
+class PieceListScreen extends StatefulWidget {
 
   @override
-  _PieceListState createState() => _PieceListState();
+  _PieceListScreenState createState() => _PieceListScreenState();
 }
 
-class _PieceListState extends State<PieceList> {
+class _PieceListScreenState extends State<PieceListScreen> {
 
  List<String> pieces = [];
 
@@ -45,8 +46,9 @@ class _PieceListState extends State<PieceList> {
       floatingActionButton: FloatingActionButton(
         onPressed: ()  {
           //showFormDialog(context);
-            showAlertDialog(context);
-        //  pieces.add(name);
+            showAddPieceDialog(context);
+          //addPiece();
+         // pieces.add(name);
           var dummy = pieces;
           setState(() {
             pieces = dummy;

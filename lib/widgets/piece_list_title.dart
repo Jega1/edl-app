@@ -1,6 +1,6 @@
 import 'package:edl/models/piece.dart';
 import 'package:flutter/material.dart';
-import '../models/bien.dart';
+
 
 class PieceListTile extends StatelessWidget {
   final Piece piece;
