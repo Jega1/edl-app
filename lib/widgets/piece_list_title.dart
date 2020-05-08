@@ -17,7 +17,9 @@ class PieceListTile extends StatelessWidget {
       child: GestureDetector(
         onTap: action,
         child: ListTile(
-          leading: Icon(Icons.sd_storage),
+          leading: Icon(Icons.sd_storage
+          ),
+
           //title: Text(bien.nom,
           title: Text('Type de piece',
             style: TextStyle(

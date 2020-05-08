@@ -1,8 +1,7 @@
 import 'dart:core';
-import 'package:edl/customs_alertbox/piece_alertbox.dart';
+import 'package:edl/custom_dialogbox/piece_dialogbox.dart';
 import 'package:flutter/material.dart';
 
-import 'add_piece_screen.dart';
 
 
 class PieceListScreen extends StatefulWidget {
@@ -12,14 +11,14 @@ class PieceListScreen extends StatefulWidget {
 }
 
 class _PieceListScreenState extends State<PieceListScreen> {
+  TextEditingController textEditingController = TextEditingController();
 
- List<String> pieces = [];
+  List<String> pieces = ['Room', 'hall','kitchen', 'wc'];
 
   @override
   void initState() {
     super.initState();
-  //  pieces = List();
-   // addPieces();
+
   }
   @override
   Widget build(BuildContext context) {
@@ -36,6 +35,9 @@ class _PieceListScreenState extends State<PieceListScreen> {
             elevation: 10,
             child: ListTile(
               title: Text(pieces[index]),
+              subtitle: new Text(
+                  "Decription : You may go now!!"
+              ),
               dense: true,
             ),
           );
@@ -45,15 +47,11 @@ class _PieceListScreenState extends State<PieceListScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: ()  {
-          //showFormDialog(context);
-            showAddPieceDialog(context);
-          //addPiece();
-         // pieces.add(name);
-          var dummy = pieces;
-          setState(() {
-            pieces = dummy;
-          });
-
+           showAddPieceDialog(context, textEditingController);
+           // var dummy = pieces;
+          //setState(() {
+            //pieces = dummy;
+          //});
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.pink,
@@ -61,6 +59,7 @@ class _PieceListScreenState extends State<PieceListScreen> {
 
     );
   }
+
 
 }
 

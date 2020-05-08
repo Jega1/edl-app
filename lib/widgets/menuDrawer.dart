@@ -1,3 +1,4 @@
+import 'package:edl/screens/description_screen.dart';
 import 'package:edl/screens/informations/info_screen.dart';
 import 'package:edl/screens/piece/pieces_list_screen.dart';
 import 'package:edl/screens/tab_bien/tabs_bien_screen.dart';
@@ -53,7 +54,7 @@ class MenuDrawer extends StatelessWidget {
             CustomListTile(Icons.home,'Bien',() => {Navigator.of(context).push(MaterialPageRoute(builder: (_) => TabsBienScreen()))}),
           //  CustomListTile(Icons.home,'Bien',() => {Navigator.of(context).push(MaterialPageRoute(builder: (_) => CompteurList()))}),
             CustomListTile(Icons.category, 'Pièces', () => {Navigator.of(context).push(MaterialPageRoute(builder: (_) => PieceListScreen()))}),
-            CustomListTile(Icons.lock, 'Clès', () => {}),
+            CustomListTile(Icons.lock, 'Clès', () => {Navigator.of(context).push(MaterialPageRoute(builder: (_) => DescriptionScreen()))}),
             CustomListTile(Icons.book, 'Signature', () => {}),
             CustomListTile(Icons.pages, 'Documents', () => {}),
           ],

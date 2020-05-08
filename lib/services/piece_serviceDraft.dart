@@ -8,7 +8,7 @@ class ApiService {
   Future<List<Piece>> getPieces() async {
     final response = await client.get("$baseUrl/api/piece");
     if (response.statusCode == 200) {
-      return pieceFromJson(response.body);
+     // return pieceFromJson(response.body);
     } else {
       return null;
     }
@@ -21,7 +21,7 @@ class ApiService {
     final response = await client.post(
       "$baseUrl/api/piece",
       headers: {"content-type": "application/json"},
-      body: pieceToJson(data),
+    //  body: pieceToJson(data),
     );
     if (response.statusCode == 201) {
       print(response);
@@ -35,7 +35,7 @@ class ApiService {
     final response = await client.put(
       "$baseUrl/api/piece/${data.idPiece}",
       headers: {"content-type": "application/json"},
-      body: pieceToJson(data),
+    //  body: pieceToJson(data),
     );
     if (response.statusCode == 200) {
       return true;

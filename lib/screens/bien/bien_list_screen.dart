@@ -41,26 +41,28 @@ class BienListScreenState extends State<BienListScreen> {
       body: Container(
           child: FutureBuilder(
               future: apiService.getBiens(),
+
               builder: (context, snapshot) {
                 if (snapshot.hasData){
                   return ListView.builder(
                     itemCount: snapshot.data.length,
                     itemBuilder: (context, index){
                       Bien bien = snapshot.data[index];
+                    //  future: apiService.getBail(),
+                    //  Bail bail = reaspons.bail['id_bail']
                       return BienListTile(
                         bien: bien,
                         action: ()async {
-                         // print('go to next page for ${bien.id}');
+                          // dialog function
+
                           Edl edl = Edl(id_bien: int.parse(bien.id), note: 'none') ;
-                         // edl.id_bien= 1;
-                        // edl.note = 'none';
                           DatabaseHelper databaseHelper = DatabaseHelper();
 
                           await databaseHelper.insertEdl(edl).then((id){
                            edl.setEdl(id);
                             print(edl.id_edl);
                             Navigator.push(context, MaterialPageRoute(
-                             builder: (context) => PieceTapScreen(),
+                             builder: (context) => PieceTapScreen(edl: edl,),
                             ),);
                           }) ;
 

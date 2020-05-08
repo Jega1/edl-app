@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           '/type-edl': (ctx) => TypeEdlScreen(),
        // '/bien-list-screen': (ctx) => BienListScreen(),
        // '/bien-detail-screen': (ctx) => BienDetailsScreen(),
-        '/tabs-bien-screen': (ctx) => TabsBienScreen(),
+          '/tabs-bien-screen': (ctx) => TabsBienScreen(),
            '/note-screen': (ctx) => CompteurList(),
 
        '/pieces-list': (ctx) => PieceListScreen(),

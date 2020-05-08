@@ -11,7 +11,7 @@ class Edl {
  Edl({
    this.id_edl,
    this.id_bien,
-   //this.idBail;
+  // this.idBail,
    //this typeEdl;
    // this.dateEdl;
    // this.signatureAge;
@@ -24,13 +24,12 @@ class Edl {
       {
         "id_edl": id_edl,
         "id_bien": id_bien,
-        //"idBail": idBail,
+       // "idBail": idBail,
         //"typeEdl": typeEdl,
         // "dateEdl": dateEdl,
         // "signatureAge": signatureAge,
         //"signatureLocat": signatureLocat,
         "note": note
-
       };
 
    setEdl(int newIdEdl){

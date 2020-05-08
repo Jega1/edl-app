@@ -1,7 +1,13 @@
+import 'package:edl/models/edl.dart';
+import 'package:edl/screens/piece/piece_tap/piece_detail_screen.dart';
 import 'package:edl/widgets/menuDrawer.dart';
 import 'package:flutter/material.dart';
 
 class PieceTapScreen extends StatefulWidget {
+
+    Edl edl;
+  PieceTapScreen({this.edl});
+
   @override
   _PieceTapScreenState createState() => _PieceTapScreenState();
 }
@@ -14,7 +20,7 @@ class _PieceTapScreenState extends State<PieceTapScreen> {
       // initialIndex: 0,
       child: Scaffold(
           appBar: AppBar(
-            title: Text('Tab Piece'),
+            title: Text('${widget.edl.id_edl}'),
 
             bottom: TabBar(
               indicatorColor: Colors.yellowAccent,
@@ -39,10 +45,10 @@ class _PieceTapScreenState extends State<PieceTapScreen> {
           drawer: MenuDrawer(),
           body: TabBarView(
             children: <Widget>[
-              Text('Piece details'),
+              PieceDetailScreen(),
               Text('Piece equipements'),
               Text('Piece equipements'),
-             // CompteurList(),
+
              // CompteurScre(),
 
             ],

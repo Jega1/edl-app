@@ -51,7 +51,6 @@ class Bien {
     nom: json["nom"],
     description: json["description"],
     type: json["type"],
-
     etage: json["etage"],
     porte: json["porte"],
     piece: json["piece"],
@@ -71,7 +70,6 @@ class Bien {
     "nom": nom,
     "description": description,
     "type": type,
-
     "etage": etage,
     "porte": porte,
     "piece": piece,

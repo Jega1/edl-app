@@ -38,7 +38,7 @@ class DatabaseHelper {
 
   String pieceTable = 'piece_table';
   String colIdPiece  = 'id_piece';
- // String colIdEdl = 'id_edl';
+  String colId_edl = 'id_edl';
   String colTypePiece = 'typePiece';
 
 
@@ -78,7 +78,7 @@ class DatabaseHelper {
 
     await db.execute('CREATE TABLE $testTable($colIdT INTEGER PRIMARY KEY AUTOINCREMENT, $colIdBien TEXT, $colName TEXT)');
     await db.execute('CREATE TABLE $edlTable($colIdEdl INTEGER PRIMARY KEY AUTOINCREMENT, $colId_bien INTEGER, $colNote TEXT)');
-    await db.execute('CREATE TABLE $pieceTable($colIdPiece INTEGER PRIMARY KEY AUTOINCREMENT, $colTypePiece TEXT)');
+    await db.execute('CREATE TABLE $pieceTable($colIdPiece INTEGER PRIMARY KEY AUTOINCREMENT, $colId_edl INTEGER, $colTypePiece TEXT)');
   }
 
   // Insert Operation: Insert a com object to database

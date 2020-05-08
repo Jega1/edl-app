@@ -6,26 +6,29 @@ class DescriptionScreen extends StatefulWidget {
 }
 
 class _DescriptionScreenState extends State<DescriptionScreen> {
+  List<String> descriptions = ['Nature', 'Etat','Fonctinnement', 'dégradation', 'note','Photo'];
+
+
   @override
+
   Widget build(BuildContext context) {
-    return
+    return new Scaffold(
+      appBar: new AppBar(
+        title: Text('which part of description dynamic variable')
+      ),
+      body: ListView.builder(
+          itemCount: descriptions.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+              child: ListTile(
+                onTap: () {},
+                title: Text(descriptions[index]),
+              ),
 
-
-
-
-
-      ListView(
-        children: <Widget>[
-          ListTile(
-            title: Text('Sun'),
+            );
+          }
           ),
-          ListTile(
-            title: Text('Moon'),
-          ),
-          ListTile(
-            title: Text('Star'),
-          ),
-        ],
-      );
+    );
+
   }
 }
